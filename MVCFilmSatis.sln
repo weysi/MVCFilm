@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCFilmSatis", "MVCFilmSatis\MVCFilmSatis.csproj", "{B23BA9BB-4D0D-4B8F-8653-AB00260CF732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B23BA9BB-4D0D-4B8F-8653-AB00260CF732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23BA9BB-4D0D-4B8F-8653-AB00260CF732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23BA9BB-4D0D-4B8F-8653-AB00260CF732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23BA9BB-4D0D-4B8F-8653-AB00260CF732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE3B44E5-79A8-41FB-99A3-EE72E7F392DA}
+	EndGlobalSection
+EndGlobal

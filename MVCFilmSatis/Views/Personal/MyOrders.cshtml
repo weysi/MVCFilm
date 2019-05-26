@@ -1,0 +1,40 @@
+﻿@using MVCFilmSatis.Models
+@model List<Order>
+@{
+    ViewBag.Title = "MyOrders";
+}
+<div class="container">
+    <h2>MyOrders</h2>
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Movie</th>
+            <th>Purchase Date</th>
+            <th>Status</th>
+            <th>Download</th>
+        </tr>
+
+        @if(Model.Count == 0)
+        {
+            <tr>
+                <td colspan="4">No order found.</td>
+            </tr>
+        } else {
+            foreach (var order in Model)
+            {
+                foreach (var orderitem in order.OrderItems)
+                {
+                <tr>
+                    <td>@orderitem.Movie.Name</td>
+                    <td>@order.Date.ToString("dd.MM.yyyy")</td>
+                    <td>@Html.Raw(order.IsPaid ? "Paid" : "Waiting")</td>
+                    <td>
+                    <a href="https://r1---sn-aigzrn7s.googlevideo.com/videoplayback?dur=144.938&amp;id=o-AAZ0lj7bGhnySAHfMAW6JPacysODRVvPP7ZbsYc2e-aV&amp;mn=sn-aigzrn7s%2Csn-aigl6n7d&amp;source=youtube&amp;fvip=1&amp;ratebypass=yes&amp;c=WEB&amp;requiressl=yes&amp;lmt=1538076283750442&amp;sparams=dur%2Cei%2Cid%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cratebypass%2Crequiressl%2Csource%2Cexpire&amp;expire=1551273115&amp;ms=au%2Crdu&amp;ipbits=0&amp;pl=24&amp;mv=u&amp;mt=1551250892&amp;itag=22&amp;mm=31%2C29&amp;txp=5531332&amp;mime=video%2Fmp4&amp;ei=Ozh2XNW0NZTS1garj7SgDA&amp;key=yt6&amp;ip=149.13.117.213&amp;signature=1A170B08DB6CC8948D822293C99AD8732FBF976C.DB737F390758349E30873FE4BD6599B468084A9F&amp;video_id=@orderitem.Movie.YoutubeId&amp;title=@orderitem.Movie.Name" target="_blank" class="btn btn-success">
+                        Download</a>
+                    </td>
+                </tr>
+                }
+            }
+        }
+    </table>
+</div>
